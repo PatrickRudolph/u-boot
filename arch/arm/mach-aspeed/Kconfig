@@ -82,6 +82,11 @@ config ASPEED_ENABLE_DEBUG_UART
 	  systems, but may be useful to enable for debugging during
 	  development.
 
+config ASPEED_DEBUG_UART_TO_UART1
+	bool "Route debug UART to UART1"
+	depends on ASPEED_AST2500
+	help
+	  Route debug UART to TXD1/RXD1 pins.
 endif
 
 config ASPEED_PALLADIUM
