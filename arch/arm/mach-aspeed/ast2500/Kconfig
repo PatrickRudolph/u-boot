@@ -17,6 +17,12 @@ config TARGET_EVB_AST2500
 	  20 pin JTAG, pinouts for 14 I2Cs, 3 SPIs and eSPI, 8 PWMs.
 endchoice
 
+config DRAM_UART_TO_UART1
+	bool
+	prompt "Route debug UART to UART1"
+	help
+	  Route debug UART to TXD1/RXD1 pins.
+
 source "board/aspeed/evb_ast2500/Kconfig"
 
 endif
