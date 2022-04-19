@@ -84,6 +84,13 @@ config ASPEED_ENABLE_DEBUG_UART
 
 endif
 
+config ASPEED_ROUTE_UART5_TO_UART1
+	bool "Route UART5 console to UART1 pins"
+	depends on ASPEED_AST2500
+	help
+	  Route UART5 console to TXD1/RXD1 pins instead of TXD5/RXD5 pins.
+	  Does not affect the debug uart functionality.
+
 config ASPEED_PALLADIUM
 	bool "Aspeed palladium for simulation"
 	default n
