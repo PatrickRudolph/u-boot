@@ -33,6 +33,12 @@ config DRAM_UART_TO_UART1
 	help
 	  Route debug UART to TXD1/RXD1 pins.
 
+config FIRMWARE_DISABLE_2ND_BOOT
+	bool
+	prompt "Do not disable WDT2 for 2nd boot function"
+	help
+	  Do not disable WDT2 for 2nd boot function.
+
 source "board/aspeed/evb_ast2500/Kconfig"
 source "board/ibm/genesis3/Kconfig"
 
