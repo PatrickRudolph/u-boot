@@ -15,8 +15,19 @@ config TARGET_EVB_AST2500
 	  It has 512M of RAM, 32M of SPI flash, two Ethernet ports,
 	  4 Serial ports, 4 USB ports, VGA port, PCIe, SD card slot,
 	  20 pin JTAG, pinouts for 14 I2Cs, 3 SPIs and eSPI, 8 PWMs.
+
+config TARGET_IBM_GENESIS3
+	bool "IBM-Genesis3"
+	help
+	  IBM Genesis3 is an IBM evaluation board for Intel Xeon
+	  and AST2500 BMC. It has 512M of RAM, 32M of SPI flash,
+	  two Ethernet ports, 1 debug uart, 1 USB ports and 1 PCIe
+	  port connected to the PCH.
+	  It has support for JTAG, pinouts for 9 I2Cs and eSPI.
+
 endchoice
 
 source "board/aspeed/evb_ast2500/Kconfig"
+source "board/ibm/genesis3/Kconfig"
 
 endif

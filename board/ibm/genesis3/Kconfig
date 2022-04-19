@@ -1,0 +1,13 @@
+if TARGET_IBM_GENESIS3
+
+config SYS_BOARD
+	default "genesis3"
+
+config SYS_VENDOR
+	default "ibm"
+
+config SYS_CONFIG_NAME
+	string "board configuration name"
+	default "ibm_genesis3"
+
+endif
