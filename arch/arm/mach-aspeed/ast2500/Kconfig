@@ -23,6 +23,16 @@ config DRAM_UART_TO_UART1
 	help
 	  Route debug UART to TXD1/RXD1 pins.
 
+config FIRMWARE_2ND_BOOT
+	bool
+	default y
+	prompt "Keep WDT2 running to support the firmware 2nd boot"
+	help
+	  Saying yes here let the WDT2 running (if configured by
+	  hw straps) and allows the platform to boot from 2nd
+	  SPI flash if WDT2 isn't poked withing 22 seconds.
+	  Saying no disables the WDT2 in early platform initialisation.
+
 source "board/aspeed/evb_ast2500/Kconfig"
 
 endif
