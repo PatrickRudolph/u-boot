@@ -95,7 +95,7 @@
  *    CONFIG_DDR3_8GSTACK         // DDR3 8Gbit Stack die
  *    CONFIG_DDR4_4GX8            // DDR4 4Gbit X8 dual part
  * 5. Firmware 2nd boot flash
- *    CONFIG_FIRMWARE_2ND_BOOT (Removed)
+ *    CONFIG_FIRMWARE_2ND_BOOT
  * 6. Enable DRAM extended temperature range mode
  *    CONFIG_DRAM_EXT_TEMP
  * 7. Select WDT_Full mode for power up initial reset
@@ -642,13 +642,11 @@ bypass_USB_init:
 /******************************************************************************
  Disable WDT2 for 2nd boot function
  ******************************************************************************/
-/*
-#ifndef CONFIG_FIRMWARE_2ND_BOOT
+#if !defined(CONFIG_FIRMWARE_2ND_BOOT)
     ldr   r0, =0x1e78502c
     mov   r1, #0
     str   r1, [r0]
 #endif
-*/
 /******************************************************************************
  Disable WDT3 for SPI Address mode (3 or 4 bytes) detection function
  ******************************************************************************/
