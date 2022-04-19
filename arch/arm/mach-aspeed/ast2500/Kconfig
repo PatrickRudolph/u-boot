@@ -27,6 +27,12 @@ config TARGET_IBM_GENESIS3
 
 endchoice
 
+config DRAM_UART_TO_UART1
+	bool
+	prompt "Route debug UART to UART1"
+	help
+	  Route debug UART to TXD1/RXD1 pins.
+
 source "board/aspeed/evb_ast2500/Kconfig"
 source "board/ibm/genesis3/Kconfig"
 
