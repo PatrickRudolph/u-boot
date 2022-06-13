@@ -688,6 +688,7 @@ dtb-$(CONFIG_ARCH_ASPEED) += \
 	ast2600-pfr.dtb \
 	ast2600-rainier.dtb \
 	ast2600-s6q.dtb \
+	ast2600-sbp1.dtb \
 	ast2600-slt.dtb \
 	ast2600-tacoma.dtb
 
